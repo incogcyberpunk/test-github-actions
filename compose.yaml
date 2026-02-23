@@ -10,22 +10,22 @@ services:
     container_name: "my-app-cont1"
 
   my-express-app2:
-    build:
-      context: .
     image: my_app:latest
     ports:
       - 5555:3333
     environment:
       whoisthere: "incog"
     container_name: "my-app-cont2"
+    depends_on:
+      - my-express-app
 
   my-express-app3:
-    build:
-      context: .
     image: my_app:latest
     ports:
       - 8888:3333
     environment:
       whoisthere: "incog"
     container_name: "my-app-cont3"
+    depends_on:
+      - my-express-app
 
