@@ -7,7 +7,7 @@ services:
       - 3333:3333
     environment:
       whoisthere: "incog"
-    container_name: "my-app-cont"
+    container_name: "my-app-cont1"
 
   my-express-app2:
     build:
@@ -17,7 +17,7 @@ services:
       - 5555:3333
     environment:
       whoisthere: "incog"
-    container_name: "my-app-cont"
+    container_name: "my-app-cont2"
 
     my-express-app3:
         build:
@@ -27,5 +27,5 @@ services:
           - 8888:3333
         environment:
           whoisthere: "incog"
-        container_name: "my-app-cont"
+        container_name: "my-app-cont3"
 
